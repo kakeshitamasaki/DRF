@@ -1,0 +1,13 @@
+<h1>aa</h1>
+{% for product in Moviedata_OBJ %}
+    {{product.name}}
+    <img class="w-full" src="{{product.image.url}}" alt="">
+
+    {% if product.movie %}<!--属性が存在する場合-->
+        <video id="video_content" src="{{product.movie.url}}" poster="" controls>
+        動画の再生にはHTML5が必要です。
+        </video>
+    {% endif %}
+
+{% endfor %}
+
